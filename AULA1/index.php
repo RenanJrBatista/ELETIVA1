@@ -8,7 +8,7 @@
 <body>
     <h1> Hoje é dia <?php echo date("d/m/Y, g:i a"); ?></h1>
 
-    <form action="AULA1/resposta.php" method="POST">
+    <form action="resposta.php" method="POST">
         <input type="text" name="valor"/>
         <button type="submit">Enviar</button>
 
