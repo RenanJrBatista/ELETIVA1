@@ -7,18 +7,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Lista 3 - Exercicio 1</h1>
-    <form action="respexer1.php" method="post">
-        <?php
-            for($i=1; $i<=7; $i++)
-            {?>
-                 <input type='number' name='valor<?= $i?>'>
-                <?php 
-            } ?>
-        <button type="Submit">Enviar</button>
+    <main class="container">
+    <h3>Funções em PHP - EXEMPLOS 2</h3>
+    <form action="resposta2.php" method="POST">
+        <div class="row">
+            <div class="col">
+                <input type="number" name="valor1" class="form-control">
+            </div>
+            <div class="col">
+                <input type="text" name="valor2" class="form-control">
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary">ENVIAR</button>
+            </div>
+        </div>
 
 
 
+
+
+
+        </main>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
