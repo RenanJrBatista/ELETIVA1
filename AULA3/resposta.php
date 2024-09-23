@@ -45,17 +45,6 @@
                     echo "<p> R$ $moeda </p>";
 
 
-
-
-
-
-
-
-
-
-
-
-
             }catch(Exception $e)
             {
                 echo "ERRO!!".$e->getMessage();
