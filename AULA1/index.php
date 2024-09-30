@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeira Pagina</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1> Hoje é dia <?php echo date("d/m/Y, g:i a"); ?></h1>
-
+    <h1>hoje é dia <?php echo date("d/m/Y"); ?></h1>
     <form action="resposta.php" method="POST">
-        <input type="text" name="valor"/>
+        <input type="text" name="valor" />
         <button type="submit">Enviar</button>
-
-
-
     </form>
-
-
 </body>
 </html>

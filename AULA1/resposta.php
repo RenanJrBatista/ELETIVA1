@@ -6,25 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-
-    <?php 
-
-    //ESTE É UM COMENTARIO 
-    #ESTILO PYTHON
-    /*
-        BLOCO DE COMENTARIO 
-        OK ?
-    */
-        $valor = $_POST['valor'];
-
-        $valor = (int) $_POST['Valor'];
+    <?php
+        //Este é um comentário de uma linha
+        #Estilo Python
+        /*
+            Este
+            é um comentário em bloco
+        */
+        $valor = (int) $_POST['valor'];
         $valor = (float) $_POST['valor'];
         $valor = (string) $_POST['valor'];
         //$valor = (bool) $_POST['valor'];
-        //
-
-        echo 'valor informado: '.$valor;  // .(ponto) é operador de contenação
-    
-    ?>    
+        echo 'Valor informado: '.$valor;
+    ?>
 </body>
 </html>

@@ -10,25 +10,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Resposta Exer 2 - lista 4</h1>
+    <h1>Resposta Exer 3 - lista 4</h1>
         <?php 
-            function Maisculo(string $palavra) :string 
+            function Contem(string $palavra1, string $palavra2) :int
             {
-                return  strtoupper($palavra);
-            }
-
-            function Minisculo(string $palavra): string
-            {
-                return strtolower($palavra);
+                return  strpos($palavra1, $palavra1);
             }
 
             if($_SERVER["REQUEST_METHOD"] == "POST")
             {
                 try
                 {
-                    $palavra = (string) $_POST['palavra'];
-                    echo "<p> Palavra Maiscula: ".Maisculo($palavra)."</p>";
-                    echo "<p> Palavra Maiscula: ".Minisculo($palavra)."</p>";
+                    $palavra1 = (string) $_POST['palavra1'];
+                    $palavra2 = (string) $_POST['palavra2'];
+                    $pos = Contem($palavra1, $palavra2);
+                    if ($pos === false)
+                        echo "<P>Palavras não existe na outra</P>";
+                    else
+                        echo "<p> Palavra não existe</p>";
 
                 }catch(Exception $e)
                 {

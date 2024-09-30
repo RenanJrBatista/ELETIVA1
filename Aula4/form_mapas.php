@@ -7,14 +7,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Lista 3 - Exercicio 6</h1>
-    <form action="respexer6.php" method="post">
-        
-            <label for="valor1" class="form-label">Digite um numero: </label>
-            <input type="namber" name="valor1" id="valor1">
-            <button type="submit">ENVIAR</button>
-    
-        </form>
+    <!--Comentário no HTML-->
+    <form action="" method="POST">
+        <?php for($i=1;$i<=10; $i++): ?>
+            <input type="text" name="nomes[]" 
+                    placeholder="Valor <?= $i ?>"/>
+        <?php endfor; ?>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <?php
+        if ($_SERVER['REQUEST_METHOD'] == "POST"){
+            try{
+                $valores = $_POST['nomes'] ;
+                foreach($valores as $chave => $valor)
+                    echo "<p>$chave : $valor </p>";
+            } catch (Exception $e){
+                echo $e->getMessage();
+            }
+        }
+    ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
